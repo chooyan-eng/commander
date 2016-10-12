@@ -87,3 +87,14 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 
+/nbproject/private/### https://raw.github.com/github/gitignore/87bd07e50dd98527131a1f310b4e4915a5364cd7/Global/netbeans.gitignore
+
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
+
+
