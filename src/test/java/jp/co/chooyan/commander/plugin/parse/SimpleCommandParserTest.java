@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jp.co.chooyan.commander.core.parse;
+package jp.co.chooyan.commander.plugin.parse;
 
+import jp.co.chooyan.commander.core.parse.Parser;
 import org.junit.Assert;
 import org.junit.Test;
 

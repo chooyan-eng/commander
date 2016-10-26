@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jp.co.chooyan.commander.core.analyze;
+package jp.co.chooyan.commander.plugin.output;
 
+import jp.co.chooyan.commander.core.output.Outputter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,9 +13,9 @@ import org.junit.Test;
  *
  * @author chooyan_eng
  */
-public class SimpleHistoryAnalyzerTest {
+public class JsonOutputterTest {
     @Test
-    public void SimpleHistoryAnalyzer_implements_Analyzer() {
-        Assert.assertTrue(new SimpleHistoryAnalyzer() instanceof Analyzer);
+    public void JsonOutputter_implements_Outputter() {
+        Assert.assertTrue(new JsonOutputter() instanceof Outputter);
     }
 }

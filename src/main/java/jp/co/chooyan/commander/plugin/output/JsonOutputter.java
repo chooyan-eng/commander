@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jp.co.chooyan.commander.core.parse;
+package jp.co.chooyan.commander.plugin.output;
+
+import jp.co.chooyan.commander.core.output.Outputter;
 
 /**
  *
  * @author chooyan_eng
  */
-public class SimpleCommandParser implements Parser {
+public class JsonOutputter implements Outputter {
     
 }
