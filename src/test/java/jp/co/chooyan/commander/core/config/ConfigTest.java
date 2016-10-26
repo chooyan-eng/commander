@@ -30,12 +30,15 @@ public class ConfigTest {
     Config mConfig;
     
     @Before
-    public void init() throws IOException, URISyntaxException {        
-        mConfig = Config.parse(new ByteArrayInputStream(FileHelper.readAllBytes("test_config.yml")));
+    public void init() throws IOException, URISyntaxException {
+        mConfig = Config.parse(Paths.get("src", "test", "resources", "test_config.yml").toString());
     }
     
     @Test
     public void canGetAnalyzerName() {
         assertThat(mConfig.getAnalyzerName(), not(nullValue()));
-    }
+        assertThat(mConfig.getAnalyzerName(), is("SimpleHistoryAnalyzer"));
+        assertThat(mConfig.getParserName(), is("SimpleCommandParser"));
+        assertThat(mConfig.getOutputterName(), is("JsonOutputter"));
+    }    
 }

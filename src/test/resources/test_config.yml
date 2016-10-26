@@ -1,2 +1,4 @@
 ## YAML Template.
----
+parser: SimpleCommandParser
+analyzer: SimpleHistoryAnalyzer
+outputter: JsonOutputter
