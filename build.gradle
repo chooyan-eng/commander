@@ -9,3 +9,11 @@ dependencies {
     compile group: 'com.esotericsoftware.yamlbeans', name: 'yamlbeans', version: '1.09'
     testCompile 'junit:junit:4.12'
 }
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Commander Tool', 'Implementation-Version': 1.0 
+        attributes "Main-Class" : "jp.co.chooyan.commander.Executor"
+    }
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+}
