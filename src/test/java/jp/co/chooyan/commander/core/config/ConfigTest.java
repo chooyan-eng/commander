@@ -5,18 +5,12 @@
  */
 package jp.co.chooyan.commander.core.config;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.FileSystems;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.nio.file.Files;
 import java.nio.file.Paths;
-import javafx.scene.shape.Shape;
-import jp.co.chooyan.commander.helper.FileHelper;
 
 import static org.hamcrest.CoreMatchers.*; 
 import static org.junit.Assert.*;
