@@ -25,12 +25,12 @@ public class ConfigTest {
     
     @Before
     public void init() throws IOException, URISyntaxException {
-        mConfig = Config.parse(Paths.get("src", "test", "resources", "test_config.yml").toString());
+        mConfig = Config.parse(Paths.get("src", "test", "resources", "config.yml").toString());
     }
     
     @Test
     public void canGetAnalyzerName() {
-        assertThat(mConfig.getInputFile(), is("/usr/local/workdir/java/commander/src/test/resources/test_command.txt"));
+        assertThat(mConfig.getInputFile(), is("test_command.txt"));
         assertThat(mConfig.getAnalyzerName(), is("jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer"));
         assertThat(mConfig.getParserName(), is("jp.co.chooyan.commander.plugin.parse.SimpleCommandParser"));
         assertThat(mConfig.getOutputterName(), is("jp.co.chooyan.commander.plugin.output.JsonOutputter"));
