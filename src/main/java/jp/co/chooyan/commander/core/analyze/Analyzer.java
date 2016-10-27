@@ -10,5 +10,5 @@ package jp.co.chooyan.commander.core.analyze;
  * @author chooyan_eng
  */
 public interface Analyzer {
-    
+    public Object analyze(Object parsedObject);
 }

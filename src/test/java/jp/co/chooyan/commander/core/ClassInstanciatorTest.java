@@ -5,7 +5,7 @@
  */
 package jp.co.chooyan.commander.core;
 
-import jp.co.chooyan.commander.plugin.analyze.SimpleHistoryAnalyzer;
+import jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer;
 import jp.co.chooyan.commander.plugin.output.JsonOutputter;
 import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
 import org.junit.Test;
@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 public class ClassInstanciatorTest {
     @Test
     public void test_can_instanciate_implementClasses() {
-        assertTrue(ClassInstanciator.instanciate("jp.co.chooyan.commander.plugin.analyze.SimpleHistoryAnalyzer") instanceof SimpleHistoryAnalyzer);
+        assertTrue(ClassInstanciator.instanciate("jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer") instanceof HistoryCountAnalyzer);
         assertTrue(ClassInstanciator.instanciate("jp.co.chooyan.commander.plugin.parse.SimpleCommandParser") instanceof SimpleCommandParser);
         assertTrue(ClassInstanciator.instanciate("jp.co.chooyan.commander.plugin.output.JsonOutputter") instanceof JsonOutputter);
     }

@@ -6,11 +6,16 @@
 package jp.co.chooyan.commander.plugin.analyze;
 
 import jp.co.chooyan.commander.core.analyze.Analyzer;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  *
  * @author chooyan_eng
  */
-public class SimpleHistoryAnalyzer implements Analyzer {
-    
+public class HistoryCountAnalyzerTest {
+    @Test
+    public void HistoryCountAnalyzer_implements_Analyzer() {
+        Assert.assertTrue(new HistoryCountAnalyzer() instanceof Analyzer);
+    }
 }
