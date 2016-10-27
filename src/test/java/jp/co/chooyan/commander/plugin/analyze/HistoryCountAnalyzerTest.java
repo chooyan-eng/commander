@@ -5,8 +5,15 @@
  */
 package jp.co.chooyan.commander.plugin.analyze;
 
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import jp.co.chooyan.commander.core.analyze.Analyzer;
-import org.junit.Assert;
+import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
+import static org.hamcrest.CoreMatchers.*; 
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -14,8 +21,31 @@ import org.junit.Test;
  * @author chooyan_eng
  */
 public class HistoryCountAnalyzerTest {
+
+    private Object commandList;
+
+    @Before
+    public void init() {
+        SimpleCommandParser parser = new SimpleCommandParser();
+        commandList = parser.parse(Paths.get("src", "test", "resources", "test_command.txt").toString());        
+    }
+    
     @Test
     public void HistoryCountAnalyzer_implements_Analyzer() {
-        Assert.assertTrue(new HistoryCountAnalyzer() instanceof Analyzer);
+        assertTrue(new HistoryCountAnalyzer() instanceof Analyzer);
+    }
+    
+    @Test
+    public void count_command_properly() {
+        Analyzer analyzer = new HistoryCountAnalyzer();
+        Object o = analyzer.analyze(commandList);
+        
+        assertTrue(o instanceof Map);
+        
+        Map<String, Integer> commandCountMap = (Map<String, Integer>) o;
+        
+        assertThat(commandCountMap.get("open"), is(2));
+        assertThat(commandCountMap.get("ll"), is(64));
+        assertThat(commandCountMap.get("cd"), is(50));
     }
 }

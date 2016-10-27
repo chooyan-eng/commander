@@ -31,7 +31,7 @@ public class ConfigTest {
     @Test
     public void canGetAnalyzerName() {
         assertThat(mConfig.getAnalyzerName(), not(nullValue()));
-        assertThat(mConfig.getAnalyzerName(), is("SimpleHistoryAnalyzer"));
+        assertThat(mConfig.getAnalyzerName(), is("HistoryCountAnalyzer"));
         assertThat(mConfig.getParserName(), is("SimpleCommandParser"));
         assertThat(mConfig.getOutputterName(), is("JsonOutputter"));
     }    
