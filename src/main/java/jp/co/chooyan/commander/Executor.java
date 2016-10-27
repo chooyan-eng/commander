@@ -11,6 +11,7 @@ import jp.co.chooyan.commander.core.analyze.Analyzer;
 import jp.co.chooyan.commander.core.config.Config;
 import jp.co.chooyan.commander.core.output.Outputter;
 import jp.co.chooyan.commander.core.parse.Parser;
+import jp.co.chooyan.commander.util.FileUtil;
 
 /**
  *
@@ -18,15 +19,14 @@ import jp.co.chooyan.commander.core.parse.Parser;
  */
 class Executor {
     public static void main(String args[]) {
-        Config config = Config.parse(Paths.get("src", "main", "resources", "config.yml").toString());
+        Config config = Config.parse(FileUtil.toResourcePath("config.yml"));
 
         Parser parser = (Parser) ClassInstanciator.instanciate(config.getParserName());
         Analyzer analyzer = (Analyzer) ClassInstanciator.instanciate(config.getAnalyzerName());
         Outputter outputter = (Outputter) ClassInstanciator.instanciate(config.getOutputterName());
         
-        Object parsedObject = parser.parse(Paths.get("src", "test", "resources", "test_command.txt").toString());
+        Object parsedObject = parser.parse(FileUtil.toResourcePath("command.txt"));
         Object analyzedObject = analyzer.analyze(parsedObject);
         outputter.output(analyzedObject);
-        
     }
 }

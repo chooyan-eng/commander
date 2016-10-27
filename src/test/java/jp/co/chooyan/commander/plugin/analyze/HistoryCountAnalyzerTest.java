@@ -6,8 +6,6 @@
 package jp.co.chooyan.commander.plugin.analyze;
 
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import jp.co.chooyan.commander.core.analyze.Analyzer;
 import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
