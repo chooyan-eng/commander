@@ -5,6 +5,7 @@ repositories {
 }
 
 dependencies {
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
     compile group: 'com.esotericsoftware.yamlbeans', name: 'yamlbeans', version: '1.09'
     testCompile 'junit:junit:4.12'
 }

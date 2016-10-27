@@ -10,5 +10,5 @@ package jp.co.chooyan.commander.core.output;
  * @author chooyan_eng
  */
 public interface Outputter {
-    
+    public void output(Object o);
 }

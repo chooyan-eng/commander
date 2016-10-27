@@ -48,4 +48,11 @@ public class HistoryCountAnalyzerTest {
         assertThat(commandCountMap.get("ll"), is(64));
         assertThat(commandCountMap.get("cd"), is(50));
     }
+    
+    public Object getAnalyzedData() {
+        SimpleCommandParser parser = new SimpleCommandParser();
+        commandList = parser.parse(Paths.get("src", "test", "resources", "test_command.txt").toString());        
+        HistoryCountAnalyzer analyzer = new HistoryCountAnalyzer();
+        return analyzer.analyze(commandList);
+    }
 }
