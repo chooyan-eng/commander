@@ -10,5 +10,5 @@ package jp.co.chooyan.commander.core.parse;
  * @author chooyan_eng
  */
 public interface Parser {
-    
+    public Object parse(String fileName);    
 }
