@@ -1,0 +1,500 @@
+   53  scalac src/main/scala/jp/co/chooyan/Person.scala 
+   54  ll
+   55  rm -f Person.class 
+   56  gradle build
+   57  vi build.gradle 
+   58  gradle build
+   59  vi build.gradle 
+   60  gradle build
+   61  vi build.gradle 
+   62  which ls
+   63  file /bin/ls
+   64  od /bin/ls
+   65  od /bin/ls | wc -l
+   66  od -c /bin/ls | less
+   67  od -c -x /bin/ls | less
+   68  cd /usr/local/workdir/vagrant/centos7/
+   69  ll
+   70  vagrant up
+   71  999999999
+   72  vagrant ssh
+   73  ll
+   74  ll
+   75  cd /usr/local/workdir/
+   76  ll
+   77  cd python/
+   78  ll
+   79  cd /usr/local/workdir/vagrant/centos7/
+   80  ll
+   81  vagrant ssh
+   82  vagrant ssh
+   83  man ls
+   84  vagrant ssh
+   85  vagrant ssh
+   86  cd /Applications/Chess.app/Contents/
+   87  ll
+   88  lll
+   89  open ./
+   90  cd /Library/Application Support/Google/Chrome/Default/Extensions
+   91  script
+   92  cd /tmp
+   93  script
+   94  cat typescript 
+   95  vi typescript 
+   96  grep bash typescript 
+   97  vi typescript 
+   98  pwd
+   99  cd /usr/local/workdir/
+  100  ll
+  101  cd java/
+  102  ll
+  103  mkdir commander
+  104  cd co
+  105  cd commander/
+  106  ll
+  107  vi build.gradle
+  108  mkdir src{,/main{,/java,/resources},/test{,/java,/resources}}
+  109  gradle build
+  110  gradle wrapper
+  111  tree
+  112  vi build.gradle 
+  113  gradle eclipse
+  114  ll -a
+  115  vi .project 
+  116  vi .project 
+  117  vi .classpath 
+  118  git init
+  119  git status
+  120  gibo
+  121  gibo java eclipse
+  122  gibo java eclipse > .gitignore
+  123  git status
+  124  gibo java eclipse gradle > .gitignore
+  125  git status
+  126  ll
+  127  vi .gitignore 
+  128  git add -A
+  129  git status
+  130  git commit -am "[add] initial commit!
+  131  git commit -am "[add] initial commit"
+  132  ll
+  133  rm -rf .git
+  134  git clone https://github.com/chooyan-eng/commander.git
+  135  ll
+  136  git status
+  137  ll
+  138  rm -rf commander
+  139  cd ../
+  140  git clone https://github.com/chooyan-eng/commander.git
+  141  cd commander/
+  142  git init
+  143  git remote add origin git@github.com:chooyan-eng/commander.git
+  144  cat .git/config 
+  145  git config
+  146  git config --global user.name "chooyan_eng"
+  147  git config --global user.email "chooyan.engineer@gmail.com"
+  148  git branch
+  149  git status
+  150  git fetch
+  151  cat .git/config 
+  152  vi .git/config 
+  153  git fetch
+  154  git pull origin master
+  155  ll
+  156  ll -a
+  157  rm -f .gitignore 
+  158  git pull origin master
+  159  git status
+  160  gibo java eclipse gradle > .gitignore
+  161  git status
+  162  git add -A
+  163  git commit -am "[add] create project"
+  164  git push
+  165  git push origin master
+  166  git push -u origin master
+  167  ll
+  168  vi .git/config 
+  169  git push -u origin master
+  170  git status
+  171  git checkout -b add_dependencies
+  172  vi build.gradle 
+  173  git test
+  174  gradle test
+  175  tree
+  176  vi .classpath 
+  177  gradle build
+  178  vi build.gradle 
+  179  gradle eclipse
+  180  vi .classpath 
+  181  ll
+  182  ll -a
+  183  git status
+  184  git checkout build.gradle 
+  185  git status
+  186  git checkout master
+  187  git status
+  188  git add -A src
+  189  git status
+  190  rm -f src/test/java/commander/SampleTest.java
+  191  git status
+  192  git add -A src/test/java/commander/SampleTest.java
+  193  git status
+  194  git checkout -b delete-eclipse-settings
+  195  rm -f .classpath .project 
+  196  vi build.gradle 
+  197  tree
+  198  grep eclipse ./*
+  199  grep eclipse ./* -r
+  200  git status
+  201  git add -A build.gradle 
+  202  git commit -am "[delete] eclipse settings"
+  203  git checkout master
+  204  git merger delete-eclipse-settings
+  205  git merge delete-eclipse-settings
+  206  cat build.gradle 
+  207  git status
+  208  git push 
+  209  git branch
+  210  git branch -d delete-eclipse-settings
+  211  git branch -d add_dependencies
+  212  git branch
+  213  git status
+  214  git pull
+  215  ll
+  216  ll
+  217  cd src/test/java/
+  218  ll
+  219  cd commander/
+  220  ll
+  221  cd ../
+  222  ll
+  223  cd jp/co/chooyan/commander/
+  224  ll
+  225  git status
+  226  git checkout -b add_modules_test
+  227  ll
+  228  mkdir core
+  229  cd core/
+  230  ll
+  231  mkdir parse analyze output
+  232  ll
+  233  vi parse
+  234  cd parse/
+  235  lll
+  236  ll
+  237  ll ~/Library/Caches/NetBeans
+  238  ll -a ~/Library/Caches/NetBeans/8.1/
+  239  ll -a ~/Library/Caches/NetBeans/8.1/index/
+  240  javac
+  241  javac -version
+  242  history
+  243  /usr/libexec/java_home -V
+  244  ll /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+  245  git status
+  246  git status
+  247  cd ../../../../
+  248  ll
+  249  cd .././
+  250  pwd
+  251  cd ../../../../../
+  252  cd commander/
+  253  git status
+  254  git add -A
+  255  git status
+  256  git commit -am "[add] core module classes"
+  257  git checkout master
+  258  git merge add_modules_test
+  259  git push
+  260  git status
+  261  git branch -d add_modules_test
+  262  git checkout -b add_setting_file_reader
+  263  ./gradlew build
+  264  ./gradlew test
+  265  git status
+  266  git branch
+  267  git status
+  268  git add -A
+  269  git status
+  270  git diff build.gradle
+  271  git commit -am "[add] base of Config class"
+  272  cd /usr/local/workdir/vagrant/centos7/
+  273  ll
+  274  vagrant ssh
+  275  cd /usr/local/workdir/java/
+  276  ll
+  277  mkdir MathTest
+  278  cd MathTest/
+  279  ll
+  280  vi MathTest.java
+  281  javac MathTest.java 
+  282  java MathTest
+  283  java MathTest
+  284  javac MathTest.java 
+  285  vi MathTest.java
+  286  javac MathTest.java 
+  287  java MathTest
+  288  vi MathTest.java
+  289  javac MathTest.java 
+  290  java MathTest
+  291  vi MathTest.java
+  292  javac MathTest.java 
+  293  java MathTest
+  294  vi MathTest.java
+  295  javac MathTest.java 
+  296  vi MathTest.java
+  297  javac MathTest.java 
+  298  javac MathTest.java 
+  299  java MathTest
+  300  vi MathTest.java
+  301  javac MathTest.java 
+  302  java MathTest
+  303  vi MathTest.java
+  304  javac MathTest.java 
+  305  vi MathTest.java
+  306  javac MathTest.java 
+  307  java MathTest
+  308  vi MathTest.java
+  309  javac MathTest.java 
+  310  java MathTest
+  311  vi MathTest.java
+  312  javac MathTest.java 
+  313  java MathTest
+  314  vi MathTest.java
+  315  javac MathTest.java 
+  316  java MathTest
+  317  vi MathTest.java
+  318  javac MathTest.java 
+  319  java MathTest
+  320  vi MathTest.java
+  321  javac MathTest.java 
+  322  java MathTest
+  323  vi MathTest.java
+  324  javac MathTest.java 
+  325  java MathTest
+  326  vi MathTest.java
+  327  javac MathTest.java 
+  328  java MathTest
+  329  vi MathTest.java
+  330  javac MathTest.java 
+  331  clear
+  332  java MathTest
+  333  cd ../../
+  334  pwd
+  335  ll
+  336  mkdir html
+  337  cd html/
+  338  ll
+  339  ll
+  340  vi sinwave.html
+  341  llll
+  342  lll
+  343  open .
+  344  vi sinwave.html
+  345  vi AudioSample.java
+  346  ll
+  347  cp -p sinwave.html shooting.html
+  348  vi shooting.html 
+  349  cd ttt
+  350  man cd
+  351  man
+  352  man ls
+  353  man mkdir
+  354  man cd
+  355  ll
+  356  ls -1
+  357  cp -p shooting.html{,.bk}
+  358  cp -p sinwave.html{,.bk}
+  359  ll
+  360  ls -1 *.bk
+  361  ls -1 .bk
+  362  ls -1 *.bk
+  363  mkdir tmp
+  364  ls -1 *.bk | mv tmp/
+  365  ls -1 *.bk | xargs mv tmp/
+  366  ls -1 *.bk | xargs -I{} mv {} tmp/
+  367  ll
+  368  ls -l
+  369  ls -l | awk '{print $4}'
+  370  ls -l | awk '{print $9}'
+  371  ls -l | grep -v total | awk '{print $9}'
+  372  man ls
+  373  ll
+  374  ls -d 
+  375  l
+  376  ls -D
+  377  ll -i
+  378  ll
+  379  ll -i
+  380  ll
+  381  ll -k
+  382  ll -s
+  383  ll -sk
+  384  cd ../../
+  385  cd /Users/o_fcf_hpbt_vvcc_p/Do
+  386  cd /Users/o_fcf_hpbt_vvcc_p/Downloads/
+  387  ll -sk
+  388  ll -s
+  389  ll -s | tail -5
+  390  ll -s | tail -5
+  391  ll -sk | tail -5
+  392  ll
+  393  cd /usr/local/workdir/
+  394  ll
+  395  cd sandbox/
+  396  ll
+  397  ln -s downloads /Users/o_fcf_hpbt_vvcc_p/Downloads
+  398  ll
+  399  ln -s /Users/o_fcf_hpbt_vvcc_p/Downloads downloads 
+  400  ll
+  401  ll -L
+  402  ll /Users/o_fcf_hpbt_vvcc_p/
+  403  ll
+  404  ll downloads
+  405  ll downloads/
+  406  l
+  407  ll
+  408  ls -L 
+  409  ls -L downloads
+  410  ls  downloads
+  411  ll
+  412  cd downloads
+  413  ll
+  414  ll -S
+  415  ll -Sr
+  416  ll -Srx
+  417  ll -SrX
+  418  ll -X
+  419  ll -Srk
+  420  ll -Srh
+  421  ls --help
+  422  ll
+  423  cd ../
+  424  ll
+  425  mkdir temp
+  426  vi temp.txt
+  427  ll temp
+  428  ls temp
+  429  ll
+  430  ls temp*
+  431  ll temp*
+  432  touch temp/a.txt
+  433  ll temp*
+  434  ll -d temp*
+  435  ls -l
+  436  ls -l temp*
+  437  ls -l temp
+  438  ls -dl temp
+  439  ls -dlF temp
+  440  ls -dlF temp --color=auto
+  441  ls -dlGF temp
+  442  ll
+  443  ls -dlGF
+  444  ls -lGF
+  445  ll 
+  446  ll -s
+  447  ll -C
+  448  ll -C --format=vertical
+  449  ll -lC
+  450  ls -x
+  451  ls
+  452  ll -Q
+  453  ll -q
+  454  ll -w
+  455  ls -w
+  456  ls -w
+  457  ls -t
+  458  ls -I
+  459  cd /usr/local/workdir/vagrant/centos7/
+  460  vagrant ssh
+  461  mysql
+  462  ps -ef | grep mysql
+  463  ps -ef | grep mariadb
+  464  service mysql start
+  465  vagrant ssh
+  466  vagrant up
+  467  vagrant ssh
+  468  cd ~/.netbeans-derby/
+  469  ll
+  470  ll -a
+  471  cd sample/
+  472  ll
+  473  ll -a
+  474  cd ../../
+  475  ll
+  476  ll -a | grep net
+  477  cd /Applications/NetBeans/
+  478  ll -a
+  479  cd NetBeans\ 8.1.app/
+  480  ll -a
+  481  cd Contents/
+  482  ll
+  483  ll -a
+  484  ll -a MacOS/
+  485  ll -a MacOS/netbeans 
+  486  cd Resources/NetBeans/
+  487  ll -a
+  488  cd bin/
+  489  ll -a
+  490  cd ../
+  491  pwd
+  492  cd ../../
+  493  ll
+  494  cd Resources/
+  495  ll
+  496  cd N
+  497  cd NetBeans/
+  498  ll
+  499  ll etc/
+  500  vi etc/netbeans.conf 
+  501  cd /usr/local/workdir/java/commander/
+  502  ll
+  503  git status
+  504  git branch
+  505  git diff src/main/java/jp/co/chooyan/commander/core/config/Config.java
+  506  git status
+  507  git add -A
+  508  git commit -am "[add] parsing config yml file."
+  509  git push
+  510  git checkout master
+  511  git branch
+  512  git merge add_setting_file_reader
+  513  git push
+  514  git status
+  515  git branch -d add_setting_file_reader
+  516  git status
+  517  ll
+  518  ./gradlew test
+  519  git checkout -b move_implement_class_to_plugin_package
+  520  ./gradlew test
+  521  ./gradlew test
+  522  git status
+  523  git add -A
+  524  git commit -am "[modify] move package"
+  525  git checkout master
+  526  git branch
+  527  git merge move_implement_class_to_plugin_package
+  528  git status
+  529  git push
+  530  git branch -d move_implement_class_to_plugin_package
+  531  pwd
+  532  cd ../
+  533  ll
+  534  git clone https://github.com/chooyan-eng/yamlbeans.git
+  535  ll
+  536  cd yamlbeans/
+  537  ll
+  538  git status
+  539  git branch
+  540  git checkout -b instanciate_implemented_object
+  541  git status
+  542  cd ../commander/
+  543  git status
+  544  git add -A
+  545  git commit -am "[add] class instanciator"
+  546  git push
+  547  ./gradlew test
+  548  git status
+  549  git pull
+  550  git status
+  551  history
+  552  history > src/main/resources/command.txt

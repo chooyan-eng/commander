@@ -43,8 +43,8 @@ public class HistoryCountAnalyzerTest {
         Map<String, Integer> commandCountMap = (Map<String, Integer>) o;
         
         assertThat(commandCountMap.get("open"), is(2));
-        assertThat(commandCountMap.get("ll"), is(64));
-        assertThat(commandCountMap.get("cd"), is(50));
+        assertThat(commandCountMap.get("ll"), is(118));
+        assertThat(commandCountMap.get("cd"), is(54));
     }
     
     public Object getAnalyzedData() {
