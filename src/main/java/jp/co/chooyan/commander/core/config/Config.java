@@ -18,7 +18,8 @@ import java.util.logging.Logger;
  * @author chooyan_eng
  */
 public class Config {
-    
+
+    private String mInputFile;
     private String mAnalyzerName;
     private String mParserName;
     private String mOutputterName;
@@ -30,6 +31,7 @@ public class Config {
         try {
             YamlReader yamlReader = new YamlReader(new FileReader(fileName));
             Map yamlMap = (Map) yamlReader.read();
+            config.mInputFile = (String) yamlMap.get("inputFile");
             config.mAnalyzerName = (String) yamlMap.get("analyzer");
             config.mParserName = (String) yamlMap.get("parser");
             config.mOutputterName = (String) yamlMap.get("outputter");
@@ -40,6 +42,10 @@ public class Config {
             Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
             return config;
         }
+    }
+    
+    public String getInputFile() {
+        return mInputFile;
     }
     
     public String getAnalyzerName() {

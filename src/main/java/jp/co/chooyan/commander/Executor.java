@@ -32,7 +32,7 @@ class Executor {
         Analyzer analyzer = (Analyzer) ClassInstanciator.instanciate(config.getAnalyzerName());
         Outputter outputter = (Outputter) ClassInstanciator.instanciate(config.getOutputterName());
         
-        Object parsedObject = parser.parse(FileUtil.toResourcePath("command.txt"));
+        Object parsedObject = parser.parse(config.getInputFile());
         Object analyzedObject = analyzer.analyze(parsedObject);
         outputter.output(analyzedObject);
     }
