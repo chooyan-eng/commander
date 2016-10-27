@@ -31,8 +31,8 @@ public class ConfigTest {
     @Test
     public void canGetAnalyzerName() {
         assertThat(mConfig.getAnalyzerName(), not(nullValue()));
-        assertThat(mConfig.getAnalyzerName(), is("HistoryCountAnalyzer"));
-        assertThat(mConfig.getParserName(), is("SimpleCommandParser"));
-        assertThat(mConfig.getOutputterName(), is("JsonOutputter"));
+        assertThat(mConfig.getAnalyzerName(), is("jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer"));
+        assertThat(mConfig.getParserName(), is("jp.co.chooyan.commander.plugin.parse.SimpleCommandParser"));
+        assertThat(mConfig.getOutputterName(), is("jp.co.chooyan.commander.plugin.output.JsonOutputter"));
     }    
 }

@@ -6,6 +6,8 @@
 package jp.co.chooyan.commander;
 
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jp.co.chooyan.commander.core.ClassInstanciator;
 import jp.co.chooyan.commander.core.analyze.Analyzer;
 import jp.co.chooyan.commander.core.config.Config;
@@ -19,7 +21,12 @@ import jp.co.chooyan.commander.util.FileUtil;
  */
 class Executor {
     public static void main(String args[]) {
-        Config config = Config.parse(FileUtil.toResourcePath("config.yml"));
+        if (args.length != 1) {
+            Logger.getLogger(Config.class.getName()).log(Level.SEVERE, "[usage] only one argment is acceptable, and it must be path/to/config.yml");
+            return;
+        }
+        
+        Config config = Config.parse(Paths.get(args[0]).toString());
 
         Parser parser = (Parser) ClassInstanciator.instanciate(config.getParserName());
         Analyzer analyzer = (Analyzer) ClassInstanciator.instanciate(config.getAnalyzerName());

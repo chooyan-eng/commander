@@ -1,4 +1,4 @@
 ## YAML Template.
-parser: SimpleCommandParser
-analyzer: HistoryCountAnalyzer
-outputter: JsonOutputter
+parser: jp.co.chooyan.commander.plugin.parse.SimpleCommandParser
+analyzer: jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer
+outputter: jp.co.chooyan.commander.plugin.output.JsonOutputter

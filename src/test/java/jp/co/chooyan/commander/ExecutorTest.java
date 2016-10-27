@@ -14,6 +14,6 @@ import org.junit.Test;
 public class ExecutorTest {
     @Test
     public void testMain() {
-        Executor.main(null);
+        Executor.main(new String[]{"/usr/local/workdir/java/commander/src/test/resources/test_config.yml"});
     }
 }
