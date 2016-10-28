@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jp.co.chooyan.commander.core;
 
 import java.lang.reflect.Method;
@@ -11,8 +6,6 @@ import java.util.logging.Logger;
 import jp.co.chooyan.commander.core.analyze.Analyzer;
 import jp.co.chooyan.commander.core.output.Outputter;
 import jp.co.chooyan.commander.core.parse.Parser;
-import jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer;
-import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
 
 /**
  *
