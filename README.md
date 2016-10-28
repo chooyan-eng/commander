@@ -10,19 +10,19 @@
 $ git clone https://github.com/chooyan-eng/commander.git && cd commander
 ```
 
-## 2. build
+## 2. Build
 
 ```
 $ ./gradlew build
 ```
 
-## 3. place your command history file, named "command.txt"
+## 3. Place your command history file, named "command.txt"
 
 ```
 $ history > ./command.txt
 ```
 
-## 4. place config file, named "config.yml"
+## 4. Place config file, named "config.yml"
 
 ```
 $ echo "inputFile: command.txt" > config.yml
