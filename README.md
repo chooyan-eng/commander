@@ -7,7 +7,7 @@
 ## 1. Clone the repository
 
 ```
-$ git clone https://github.com/chooyan-eng/commander.git 
+$ git clone https://github.com/chooyan-eng/commander.git && cd commander
 ```
 
 ## 2. build
@@ -44,3 +44,5 @@ _Note that java8 is installed to your machine._
 ```
 {"ll":118,"javac":21,"ln":2,"ps":2,"ls":34,"file":1,"git":115,"java":16,"od":4,"cat":4,"vagrant":11,"mysql":1,"man":7,"999999999":1,"mkdir":8,"gibo":5,"which":1,"cd":54,"grep":3,"clear":1,"tree":3,"touch":1,"history":4,"l":2,"cp":3,"lll":3,"script":2,"gradle":9,"llll":1,"vi":42,"/usr/libexec/java":1,"service":1,"rm":6,"./gradlew":6,"pwd":5,"open":2}
 ```
+
+_with config above, the output will be simple counts of each commands you typed before with JSON format_
