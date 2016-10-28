@@ -8,6 +8,7 @@ package jp.co.chooyan.commander.lang;
 import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jp.co.chooyan.commander.core.analyze.Analyzer;
 import jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer;
 import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
 import static org.hamcrest.CoreMatchers.*; 
@@ -22,6 +23,8 @@ public class ReflectionTest {
     @Test
     public void argment_of_analyze_of_HistoryCountAnalyzer_is_stringlist() {
         try {
+            Analyzer analyzer = new HistoryCountAnalyzer();
+            analyzer.getClass().getMethods();
             Method[] methods = HistoryCountAnalyzer.class.getMethods();
             for (Method m : methods) {
                 if ("analyze".equals(m.getName()) && !m.isBridge()) {
