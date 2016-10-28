@@ -17,7 +17,7 @@ import jp.co.chooyan.commander.core.parse.Parser;
 
 /**
  *
- * @author tsuyoshi-chujo
+ * @author chooyan_eng
  */
 class Executor {
     
