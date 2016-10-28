@@ -35,7 +35,7 @@ public class HistoryCountAnalyzer implements Analyzer<List<String>, Map<String, 
     private String pickCommand(String commandWithOption) {
         String command = "";
         
-        Pattern p = Pattern.compile("^[a-zA-Z0-9]+");
+        Pattern p = Pattern.compile("^[a-zA-Z0-9\\./]+");
         Matcher m = p.matcher(commandWithOption);
         if (m.find()) {
             command = m.group();
