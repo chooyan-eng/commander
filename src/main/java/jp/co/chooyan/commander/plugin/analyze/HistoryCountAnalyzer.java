@@ -16,13 +16,12 @@ import jp.co.chooyan.commander.core.analyze.Analyzer;
  *
  * @author chooyan_eng
  */
-public class HistoryCountAnalyzer implements Analyzer {
+public class HistoryCountAnalyzer implements Analyzer<List<String>, Map<String, Integer>> {
 
     @Override
-    public Object analyze(Object parsedObject) {
+    public Map<String, Integer> analyze(List<String> parsedObject) {
         Map<String, Integer> result = new HashMap<>();
-        List<String> commandList = (List<String>) parsedObject;
-        commandList.stream()
+        parsedObject.stream()
                    .map(line -> pickCommand(line))
                    .sorted()
                    .forEach(command -> { 

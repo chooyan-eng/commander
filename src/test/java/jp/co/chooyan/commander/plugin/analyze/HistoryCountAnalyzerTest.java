@@ -8,6 +8,7 @@ package jp.co.chooyan.commander.plugin.analyze;
 import java.nio.file.Paths;
 import java.util.Map;
 import jp.co.chooyan.commander.core.analyze.Analyzer;
+import jp.co.chooyan.commander.core.parse.Parser;
 import jp.co.chooyan.commander.plugin.parse.SimpleCommandParser;
 import static org.hamcrest.CoreMatchers.*; 
 import static org.junit.Assert.*;
@@ -48,9 +49,9 @@ public class HistoryCountAnalyzerTest {
     }
     
     public Object getAnalyzedData() {
-        SimpleCommandParser parser = new SimpleCommandParser();
+        Parser parser = new SimpleCommandParser();
         commandList = parser.parse(Paths.get("src", "test", "resources", "test_command.txt").toString());        
-        HistoryCountAnalyzer analyzer = new HistoryCountAnalyzer();
+        Analyzer analyzer = new HistoryCountAnalyzer();
         return analyzer.analyze(commandList);
     }
 }

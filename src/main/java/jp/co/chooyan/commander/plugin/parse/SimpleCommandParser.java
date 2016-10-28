@@ -20,10 +20,10 @@ import jp.co.chooyan.commander.core.parse.Parser;
  *
  * @author chooyan_eng
  */
-public class SimpleCommandParser implements Parser {
+public class SimpleCommandParser implements Parser <List<String>> {
     
     @Override
-    public Object parse(String fileName) {
+    public List<String> parse(String fileName) {
         List<String> commandList = new ArrayList<>();
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) { 
             stream.map(line -> line.replaceFirst("^ +[0-9]+ +", "")) // remove history number

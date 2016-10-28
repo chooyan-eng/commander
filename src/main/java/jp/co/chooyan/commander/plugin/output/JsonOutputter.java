@@ -12,11 +12,11 @@ import jp.co.chooyan.commander.core.output.Outputter;
  *
  * @author chooyan_eng
  */
-public class JsonOutputter implements Outputter {
+public class JsonOutputter implements Outputter<Object> {
 
     @Override
-    public void output(Object o) {
+    public void output(Object analyzedObject) {
         Gson gson = new Gson();
-        System.out.println(gson.toJson(o));
+        System.out.println(gson.toJson(analyzedObject));
     }
 }
