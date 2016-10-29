@@ -95,3 +95,7 @@ dist/
 nbdist/
 nbactions.xml
 .nb-gradle/
+
+
+# IntelliJ IDEA
+.idea
