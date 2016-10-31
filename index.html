@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="commander : &quot;commander&quot; analyzes your linux command usage so that you can share linux skill with your colleagues.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>commander</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chooyan-eng/commander">View on GitHub</a>
+
+          <h1 id="project_title">commander</h1>
+          <h2 id="project_tagline">&quot;commander&quot; analyzes your linux command usage so that you can share linux skill with your colleagues.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chooyan-eng/commander/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chooyan-eng/commander/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h1>
+
+<p>"commander" is a tool to analyze your CLI (such as Linux/Unix or Windows Command Prompt) history.</p>
+
+<h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h1>
+
+<h2>
+<a id="1-clone-the-repository" class="anchor" href="#1-clone-the-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Clone the repository</h2>
+
+<pre><code>$ git clone https://github.com/chooyan-eng/commander.git &amp;&amp; cd commander
+</code></pre>
+
+<h2>
+<a id="2-build" class="anchor" href="#2-build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Build</h2>
+
+<pre><code>$ ./gradlew build
+</code></pre>
+
+<h2>
+<a id="3-place-your-command-history-file-named-commandtxt" class="anchor" href="#3-place-your-command-history-file-named-commandtxt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Place your command history file, named "command.txt"</h2>
+
+<pre><code>$ history &gt; ./command.txt
+</code></pre>
+
+<h2>
+<a id="4-place-config-file-named-configyml" class="anchor" href="#4-place-config-file-named-configyml" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Place config file, named "config.yml"</h2>
+
+<pre><code>$ echo "inputFile: command.txt" &gt; config.yml
+$ echo "parser: jp.co.chooyan.commander.plugin.parse.SimpleCommandParser" &gt;&gt; config.yml
+$ echo "analyzer: jp.co.chooyan.commander.plugin.analyze.HistoryCountAnalyzer" &gt;&gt; config.yml
+$ echo "outputter: jp.co.chooyan.commander.plugin.output.JsonOutputter" &gt;&gt; config.yml
+</code></pre>
+
+<h2>
+<a id="5-run-jar-file-with-full-path-to-current-directory-as-an-argument" class="anchor" href="#5-run-jar-file-with-full-path-to-current-directory-as-an-argument" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Run JAR file with full path to current directory as an argument</h2>
+
+<pre><code>$ java -jar build/libs/commander.jar ${PWD}
+</code></pre>
+
+<p><em>Note that java8 is installed to your machine.</em></p>
+
+<h2>
+<a id="6-result-will-be-output-as-standard-output" class="anchor" href="#6-result-will-be-output-as-standard-output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. Result will be output as standard output</h2>
+
+<pre><code>{"ll":118,"javac":21,"ln":2,"ps":2,"ls":34,"file":1,"git":115,"java":16,"od":4,"cat":4,"vagrant":11,"mysql":1,"man":7,"999999999":1,"mkdir":8,"gibo":5,"which":1,"cd":54,"grep":3,"clear":1,"tree":3,"touch":1,"history":4,"l":2,"cp":3,"lll":3,"script":2,"gradle":9,"llll":1,"vi":42,"/usr/libexec/java":1,"service":1,"rm":6,"./gradlew":6,"pwd":5,"open":2}
+</code></pre>
+
+<p><em>with config above, the output will be simple counts of each commands you typed before with JSON format</em></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">commander maintained by <a href="https://github.com/chooyan-eng">chooyan-eng</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
