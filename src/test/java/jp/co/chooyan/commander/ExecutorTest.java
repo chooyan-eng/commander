@@ -9,6 +9,6 @@ import org.junit.Test;
 public class ExecutorTest {
     @Test
     public void testMain() {
-        Executor.main(new String[]{"/usr/local/workdir/java/commander/src/test/resources"});
+        Executor.main(new String[]{"./src/test/resources"});
     }
 }
